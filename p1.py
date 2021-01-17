@@ -10,5 +10,5 @@ def sumaTodosCuadrados(limitTo):
         resultado += i*i
     return resultado
         
-print(sumaTodos(100))
-print(sumaTodosCuadrados(100))
+print('suma de 1 a 100',sumaTodos(100))
+print('suma cuadrados de 1 a 100'sumaTodosCuadrados(100))
