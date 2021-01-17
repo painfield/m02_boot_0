@@ -11,4 +11,4 @@ def sumaTodosCuadrados(limitTo):
     return resultado
         
 print(sumaTodos(100))
-print(sumaTodosCuadrados(3))
+print(sumaTodosCuadrados(100))
