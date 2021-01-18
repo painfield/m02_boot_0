@@ -1,10 +1,10 @@
 import turtle
-"""
+
 def creaTortuga(nombre,color):
-    object (nombre) = turtle.Turtle()
-    nombre.shape('turtle')
-    nombre.color(color)
-    """
+    globals()[nombre] = turtle.Turtle()
+    globals()[nombre].shape('turtle')
+    globals()[nombre].color(color)
+
 def recta(nombre,distancia,velocidad=3):
     nombre.speed(velocidad)
     for i in range(10):
@@ -30,27 +30,8 @@ def curvaD(nombre,grados=45,distancia=90,velocidad=3):
     nombre.speed(3)
 
 tortuga = {'leonardo':'blue','donatello':'purple','raphael':'red','michaelangelo':'orange'}
-#for nombre,color in tortuga.index():
-#    creaTortuga(nombre,color)
-
-
-leonardo = turtle.Turtle()
-leonardo.shape('turtle')
-leonardo.color('blue')
-
-print(leonardo.speed())
-
-donatello = turtle.Turtle()
-donatello.shape('turtle')
-donatello.color('purple')
-
-raphael = turtle.Turtle()
-raphael.shape('turtle')
-raphael.color('red')
-
-michaelangelo = turtle.Turtle()
-michaelangelo.shape('turtle')
-michaelangelo.color('orange')
+for nombre,color in tortuga.items():
+    creaTortuga(nombre,color)
 
 recta(leonardo,150,5)
 recta(donatello,160,4)
