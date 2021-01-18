@@ -4,7 +4,6 @@ import random
 class Circuito():
     corredores = []
     __turtleColor = ('blue','purple','red','orange')
-    #pista
     
     def __init__(self, width, height):
         self.__screen = turtle.Screen()
