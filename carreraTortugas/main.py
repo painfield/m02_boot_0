@@ -1,4 +1,5 @@
 import turtle
+import random
 
 class Circuito():
     corredores = []
@@ -23,12 +24,18 @@ class Circuito():
             newTurtle.setpos(self.__startLine,posY*(i+1)-(posY*2.5))
             newTurtle.pendown()
             self.corredores.append(newTurtle)
-
+    
+    def competir(self):
+        first = [-(self.__finishLine),'']
+        while first[0] < self.__finishLine:
+            for tortuga in self.corredores:
+                tortuga.fd(random.randint(1,10))
+                if tortuga.xcor() > first[0]:
+                    first = [tortuga.xcor(),tortuga.color()[0]]
+        return first[1]
+            
 if __name__ == '__main__':
     circuito = Circuito(640,480)
     #barajas = Circuito(800,300)
 
-    circuito.corredores[0].fd(50)
-    circuito.corredores[1].fd(50)
-    circuito.corredores[2].fd(50)
-    circuito.corredores[3].fd(50)
+    print('{} turtle WINS!'.format(circuito.competir()))
