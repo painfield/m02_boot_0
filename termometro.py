@@ -20,7 +20,7 @@ class termometro():
             self.__sistema = sist.upper()
             return self.__sistema
             
-    def convertir(self,temp=None,sist=None):
+    def __convertir(self,temp=None,sist=None):
         if sist == None:
             sist = self.__sistema
             if temp == None:
@@ -39,7 +39,7 @@ def solicitar(objeto):
 def unificar(objeto):
     if objeto.sistema() == 'F':
         print('{} = '.format(objeto),end='')
-        objeto.convertir()
+        objeto.__convertir()
         print(objeto)
     
 def imprimir(temp,tempB):
