@@ -13,9 +13,6 @@ class mainApp(Tk):
     def start(self):
         while True:
             self.mainloop()
-            
-    def __on_close(self):
-        sys.exit()
     
 if __name__ == '__main__':
     app = mainApp('1024x768','Mi ventana','lightblue')
